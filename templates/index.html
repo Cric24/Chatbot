@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Educational Platform{% endblock %}
+
+{% block content %}
+    <div id="main-content">
+        <header>
+            <h1>Welcome to Our Educational Platform</h1>
+        </header>
+        <nav>
+            <a href="{{ url_for('home') }}"><i class="fas fa-home"></i> Home</a>
+            <a href="{{ url_for('courses') }}"><i class="fas fa-book-open"></i> Courses</a>
+            <a href="{{ url_for('about') }}"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+
+        <!-- Chatbot Toggle Button -->
+<button id="chat-toggle-button" onclick="toggleChat()" aria-label="Toggle Chatbot">
+    <i class="fas fa-comments"></i>
+</button>
+
+<button id="theme-toggle-button" onclick="toggleTheme()">
+    <i class="fas fa-moon"></i> Dark Mode
+</button>
+
+        
+        <section>
+            <h2>Our Courses</h2>
+            <p>Explore our wide range of university-level courses designed to help you excel in your academic and professional journey. Whether you're interested in Engineering, Business, Arts, Sciences, or Humanities, we have something for everyone.</p>
+            <ul>
+                <li><strong>Engineering:</strong> From Mechanical Engineering to Electrical Engineering.</li>
+                <li><strong>Business:</strong> Covering Management, Marketing, Finance, and Entrepreneurship.</li>
+                <li><strong>Arts:</strong> Dive into Fine Arts, Graphic Design, and Performing Arts.</li>
+                <li><strong>Sciences:</strong> Including Physics, Chemistry, Biology, and Environmental Science.</li>
+                <li><strong>Humanities:</strong> Learn about Philosophy, Sociology, Psychology, and History.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Why Choose Us?</h2>
+            <p>Our platform offers comprehensive courses taught by experienced instructors, flexible scheduling, and a supportive learning community. Join us today and take the next step towards your educational goals!</p>
+        </section>
+        <footer>
+            <p>&copy; 2024 Educational Platform. All rights reserved.</p>
+        </footer>
+    </div>
+{% endblock %}

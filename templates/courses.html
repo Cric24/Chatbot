@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}Courses - Educational Platform{% endblock %}
+
+{% block content %}
+    <div id="main-content">
+        <header>
+            <h1>Our University Courses</h1>
+        </header>
+         <!-- Chatbot Toggle Button -->
+<button id="chat-toggle-button" onclick="toggleChat()" aria-label="Toggle Chatbot">
+    <i class="fas fa-comments"></i>
+</button>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('courses') }}">Courses</a>
+            <a href="{{ url_for('about') }}">About Us</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <section>
+           
+            <input type="text" id="search-input" placeholder="Search for courses..." onkeyup="searchCourses()">
+            <div id="search-results"></div>
+        </section>
+
+        <section>
+            <h2>Engineering</h2>
+            <p>Our Engineering courses are designed to provide a solid foundation in various engineering disciplines, combining theoretical knowledge with practical application.</p>
+            <ul>
+                <li><strong>Mechanical Engineering:</strong> Focuses on designing, analyzing, and manufacturing mechanical systems.</li>
+                <li><strong>Electrical Engineering:</strong> Covers electrical systems, circuits, and electronic devices.</li>
+                <li><strong>Civil Engineering:</strong> Involves infrastructure development, including bridges, roads, and buildings.</li>
+                <li><strong>Computer Engineering:</strong> Merges electrical engineering with computer science for hardware and software integration.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Business</h2>
+            <p>Our Business courses aim to equip you with the skills needed to excel in various business environments, emphasizing strategic thinking and leadership.</p>
+            <ul>
+                <li><strong>Management:</strong> Learn effective management techniques and organizational behavior.</li>
+                <li><strong>Marketing:</strong> Understand market research, consumer behavior, and digital marketing strategies.</li>
+                <li><strong>Finance:</strong> Dive into financial analysis, investment strategies, and corporate finance.</li>
+                <li><strong>Entrepreneurship:</strong> Develop the skills to start and manage your own business ventures.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Arts</h2>
+            <p>Our Arts programs foster creativity and innovation, offering courses that blend traditional techniques with modern practices.</p>
+            <ul>
+                <li><strong>Fine Arts:</strong> Explore painting, sculpture, and other visual arts.</li>
+                <li><strong>Graphic Design:</strong> Learn about digital design, typography, and visual communication.</li>
+                <li><strong>Performing Arts:</strong> Engage in theater, dance, and music performances.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Sciences</h2>
+            <p>Our Science courses provide a deep understanding of the natural world, encouraging critical thinking and scientific inquiry.</p>
+            <ul>
+                <li><strong>Physics:</strong> Study the fundamental principles governing the universe.</li>
+                <li><strong>Chemistry:</strong> Explore the composition, properties, and reactions of matter.</li>
+                <li><strong>Biology:</strong> Understand living organisms, their structures, and functions.</li>
+                <li><strong>Environmental Science:</strong> Learn about ecological systems and sustainable practices.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Humanities</h2>
+            <p>Our Humanities courses delve into human society and culture, fostering a deeper understanding of human behavior and historical contexts.</p>
+            <ul>
+                <li><strong>Philosophy:</strong> Engage with fundamental questions about existence, knowledge, and ethics.</li>
+                <li><strong>Sociology:</strong> Study social behavior, institutions, and structures.</li>
+                <li><strong>Psychology:</strong> Explore the human mind and behavior.</li>
+                <li><strong>History:</strong> Analyze past events and their impact on the present and future.</li>
+            </ul>
+        </section>
+        <footer>
+            <p>&copy; 2024 Educational Platform. All rights reserved.</p>
+        </footer>
+    </div>
+{% endblock %}

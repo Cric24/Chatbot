@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}About Us - Educational Platform{% endblock %}
+
+{% block content %}
+    <div id="main-content">
+        <header>
+            <h1>About Our Educational Platform</h1>
+        </header>
+         <!-- Chatbot Toggle Button -->
+<button id="chat-toggle-button" onclick="toggleChat()" aria-label="Toggle Chatbot">
+    <i class="fas fa-comments"></i>
+</button>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('courses') }}">Courses</a>
+            <a href="{{ url_for('about') }}">About Us</a>
+            <a href="#">Contact</a>
+        </nav>
+        <section>
+            <h2>Our Mission</h2>
+            <p>At Educational Platform, our mission is to provide high-quality, accessible education to learners worldwide. We strive to empower individuals with the knowledge and skills needed to succeed in their academic and professional pursuits.</p>
+        </section>
+        <section>
+            <h2>Our Team</h2>
+            <p>Our team consists of experienced educators, industry experts, and dedicated support staff committed to creating a supportive and engaging learning environment.</p>
+            <ul>
+                <li><strong>Dr. Jane Doe:</strong> Founder and CEO with a Ph.D. in Education.</li>
+                <li><strong>Prof. John Smith:</strong> Head of Engineering Department.</li>
+                <li><strong>Ms. Emily Johnson:</strong> Lead Marketing Strategist.</li>
+                <li><strong>Mr. Michael Brown:</strong> Senior Software Developer.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Our Values</h2>
+            <ul>
+                <li><strong>Excellence:</strong> Commitment to the highest standards in education.</li>
+                <li><strong>Integrity:</strong> Upholding honesty and strong moral principles.</li>
+                <li><strong>Innovation:</strong> Embracing new ideas and technologies to enhance learning.</li>
+                <li><strong>Inclusivity:</strong> Fostering a diverse and welcoming community for all learners.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need further information, feel free to reach out to us:</p>
+            <ul>
+                <li><strong>Email:</strong> support@education.com</li>
+                <li><strong>Phone:</strong> +1 (555) 123-4567</li>
+                <li><strong>Address:</strong> 123 Education Lane, Knowledge City, EduState, 45678</li>
+            </ul>
+        </section>
+        <footer>
+            <p>&copy; 2024 Educational Platform. All rights reserved.</p>
+        </footer>
+    </div>
+{% endblock %}

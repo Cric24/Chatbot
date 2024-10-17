@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Educational Site{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p2X19tG/wMvNqx8hQPI1k8E1E/3dK1KvYHUYxgX5yzN6V5gWeFdMw9i5xPuG9xk+nWwZm+aZ91+vcVcw58pVOw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+        
+        <!-- Chatbot Sidebar -->
+        <div id="chatbot-sidebar">
+            <div id="chat-container">
+                <h2>Chatbot</h2>
+                <button id="chat-toggle-button" onclick="toggleChat()">
+                    <i class="fas fa-comments">Chat</i>
+                </button>
+                
+                <div id="chat-box">
+                    <!-- Chat messages will appear here -->
+                </div>
+                <div id="typing-indicator">Bot is typing...</div>
+                <div id="input-area">
+                    <input type="text" id="user-input" placeholder="Type your message..." autofocus>
+                    <button onclick="sendMessage()">Send</button>
+                    <button id="clear-button" onclick="clearChat()">Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+</body>
+</html>
